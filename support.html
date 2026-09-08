@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Schedule Sentry Support</title>
+<meta name="description" content="Help and FAQ for Schedule Sentry on iPhone, iPad, and Mac.">
+<style>
+  :root { --accent: #FD380A; --bg: #FFFFFF; --fg: #1C1C1E; --muted: #6E6E73; --card: #F5F5F7; --rule: #E5E5EA; }
+  @media (prefers-color-scheme: dark) {
+    :root { --accent: #FD5B36; --bg: #000000; --fg: #F2F2F7; --muted: #98989D; --card: #1C1C1E; --rule: #2C2C2E; }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--fg); }
+  body { font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover, a:focus-visible { text-decoration: underline; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 64px; }
+  nav.top { display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--rule); font-size: 0.95rem; }
+  nav.top .brand { font-weight: 600; color: var(--fg); margin-right: auto; }
+  h1 { font-size: 2rem; line-height: 1.15; margin: 36px 0 12px; letter-spacing: -0.02em; }
+  h2 { font-size: 1.3rem; margin: 36px 0 10px; }
+  p, li { margin: 0 0 10px; }
+  ul, ol { padding-left: 22px; }
+  .contact { background: var(--card); border-left: 4px solid var(--accent); border-radius: 12px; padding: 14px 20px; margin: 20px 0 8px; }
+  .contact p { margin: 0; }
+  details { border-top: 1px solid var(--rule); padding: 12px 0; }
+  details:last-of-type { border-bottom: 1px solid var(--rule); }
+  summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; list-style: none; display: flex; align-items: center; gap: 10px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: "+"; color: var(--accent); font-weight: 700; width: 1em; }
+  details[open] summary::before { content: "–"; }
+  details > *:not(summary) { margin-top: 10px; }
+  kbd { font: inherit; font-weight: 600; }
+  footer { border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 20px; color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="top">
+    <a class="brand" href="index.html">Schedule Sentry</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="support.html" aria-current="page">Support</a>
+  </nav>
+
+  <h1>Support</h1>
+  <p>Schedule Sentry turns your calendar into alarms you can't miss. Pick the calendars you care about and it creates a loud alarm (or a reminder) before each event, keeps them in sync as your calendar changes, and, with a household, lets you assign an event to a family member so <em>their</em> devices arm the alarm and you can see that they did.</p>
+
+  <div class="contact">
+    <p><strong>Need help?</strong> Email <a href="mailto:schedulesentry@gmail.com">schedulesentry@gmail.com</a> with your device model, OS version, and what you expected to happen. <!-- [CONFIRM: address to publish] --></p>
+  </div>
+  <p><a href="privacy.html">Read the privacy policy</a></p>
+
+  <h2>Frequently asked questions</h2>
+
+  <details open>
+    <summary>Why didn't my alarm fire?</summary>
+    <ol>
+      <li><strong>Alarm permission.</strong> Loud alarms use Apple's AlarmKit. Check Settings &gt; Schedule Sentry and make sure Alarms are allowed. If permission was denied, the app cannot schedule loud alarms and the Upcoming tab will say so.</li>
+      <li><strong>Silent mode and Focus.</strong> <em>Loud alarms</em> are designed to sound through the Silent switch and Focus modes, like the Clock app. <em>Reminder</em> alerts are normal notifications and respect Silent mode and Focus; switch that calendar to "Loud alarm" if you need it to break through.</li>
+      <li><strong>Is the calendar turned on?</strong> In the Calendars tab, each calendar has a switch. Only events on enabled calendars get alarms, and only for events within the upcoming window shown there.</li>
+      <li><strong>Has the app synced recently?</strong> The Upcoming tab shows "Alarms are armed as of …". Alarms come from the calendar as last synced. If it looks stale, pull to refresh or open the app; also make sure Background App Refresh is on for Schedule Sentry and Low Power Mode isn't preventing it.</li>
+      <li><strong>Did you cancel it?</strong> Cancelled alarms appear in the Cancelled list and can be restored.</li>
+    </ol>
+  </details>
+
+  <details>
+    <summary>How do I give the app calendar access?</summary>
+    <p>On first launch tap <kbd>Grant Access</kbd>. If you declined, go to Settings &gt; Privacy &amp; Security &gt; Calendars &gt; Schedule Sentry and choose <kbd>Full Access</kbd> (the app needs to read event times to schedule alarms). For the "Reminder" alert type, also allow Reminders under Settings &gt; Privacy &amp; Security &gt; Reminders. On macOS the same switches are in System Settings &gt; Privacy &amp; Security.</p>
+  </details>
+
+  <details>
+    <summary>How does Family (household) sharing work, and why does everyone need iCloud?</summary>
+    <p>A household is a shared iCloud record set. The owner creates it in the Family tab, then taps <kbd>Share Household</kbd> to send an invitation link. Each person opens the link on their own device, types the name the family will see, and joins. Everyone in the household can assign a calendar event to any member; the assignee's own devices then arm the alarm and report back ("armed", "alarm permission denied", and so on).</p>
+    <p>Everything is stored and delivered through iCloud (CloudKit): there is no Schedule Sentry server. That is why each member must be signed in to iCloud on their device, and why the household uses a shared calendar (typically the Family Sharing "Family" calendar) that every member can see.</p>
+  </details>
+
+  <details>
+    <summary>How do I leave or delete a household?</summary>
+    <p>Open the Family tab and scroll to the bottom of the household.</p>
+    <ul>
+      <li>If you created the household, tap <kbd>Delete Household</kbd>. This deletes the household from iCloud for everyone: every assignment, every receipt, every member record, and the invitation that gave members access. Members' devices stop alarming for household assignments the next time they sync.</li>
+      <li>If you joined someone else's household, tap <kbd>Leave Household</kbd>. This deletes your member record and your receipts, cancels any events assigned to you, and removes your access. The rest of the household is untouched, and you can rejoin later from a new invitation.</li>
+    </ul>
+    <p>Both actions ask you to confirm and need an internet connection. If iCloud can't be reached, nothing changes and the app tells you. This device's alarms for household assignments are removed as soon as the household is gone.</p>
+    <p>To remove a single assignment instead, open the event and tap <kbd>Remove Assignment</kbd> in its assignment sheet. Deleting all of Schedule Sentry's iCloud data (Settings &gt; [your name] &gt; iCloud &gt; Manage Account Storage &gt; Schedule Sentry &gt; Delete Data) also removes any household you own.</p>
+  </details>
+
+  <details>
+    <summary>How do I reset alert defaults or overrides?</summary>
+    <ul>
+      <li><strong>Defaults:</strong> Family tab &gt; <kbd>Your Alert Defaults</kbd>. Defaults are per platform (iPhone/iPad vs. Mac) and sync through iCloud.</li>
+      <li><strong>Per-event overrides:</strong> Your Alert Defaults &gt; <kbd>Clear Overrides</kbd> removes every per-event override.</li>
+      <li><strong>Per-calendar overrides:</strong> In the Calendars tab open the calendar's override editor and use <kbd>Reset All to Inherited</kbd> (or long-press a row to reset one field).</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Does it work on Mac?</summary>
+    <p>Yes. On macOS Schedule Sentry runs as a menu-bar app; alarms appear as a floating card with sound. Turn on <kbd>Launch at Login</kbd> from the menu-bar item so alarms keep working after a restart.</p>
+  </details>
+
+  <details>
+    <summary>I have another question or found a bug</summary>
+    <p>Email <a href="mailto:schedulesentry@gmail.com">schedulesentry@gmail.com</a>. Please don't include calendar contents you'd rather keep private; a description is enough.</p>
+  </details>
+
+  <footer>
+    <p>&copy; 2026 Daren Hunter &middot; <a href="index.html">Home</a> &middot; <a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+</div>
+</body>
+</html>

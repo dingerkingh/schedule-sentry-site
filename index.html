@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Schedule Sentry</title>
+<meta name="description" content="Schedule Sentry turns your calendar into alarms you can't miss, on iPhone, iPad, and Mac.">
+<style>
+  :root {
+    --accent: #FD380A;
+    --bg: #FFFFFF;
+    --fg: #1C1C1E;
+    --muted: #6E6E73;
+    --card: #F5F5F7;
+    --rule: #E5E5EA;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --accent: #FD5B36;
+      --bg: #000000;
+      --fg: #F2F2F7;
+      --muted: #98989D;
+      --card: #1C1C1E;
+      --rule: #2C2C2E;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--fg); }
+  body {
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover, a:focus-visible { text-decoration: underline; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+  header.hero { padding: 72px 0 40px; text-align: center; }
+  .mark {
+    width: 84px; height: 84px; margin: 0 auto 20px; border-radius: 20px;
+    background: var(--accent); display: grid; place-items: center;
+  }
+  .mark svg { width: 48px; height: 48px; fill: none; stroke: #fff; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+  h1 { font-size: 2.4rem; line-height: 1.1; margin: 0 0 12px; letter-spacing: -0.02em; }
+  .pitch { font-size: 1.25rem; color: var(--muted); margin: 0 auto 28px; max-width: 34ch; }
+  .cta {
+    display: inline-block; background: var(--accent); color: #fff; font-weight: 600;
+    padding: 12px 22px; border-radius: 999px;
+  }
+  .cta:hover { text-decoration: none; filter: brightness(1.06); }
+  .cta small { display: block; font-weight: 400; font-size: 0.8rem; opacity: 0.85; }
+  .features { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin: 24px 0 48px; }
+  .feature { background: var(--card); border-radius: 16px; padding: 20px; }
+  .feature h2 { font-size: 1.05rem; margin: 0 0 6px; }
+  .feature p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+  footer { border-top: 1px solid var(--rule); padding: 24px 0 48px; color: var(--muted); font-size: 0.9rem; }
+  footer nav a { margin-right: 18px; }
+  @media (max-width: 480px) { h1 { font-size: 2rem; } header.hero { padding-top: 48px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="7.5"/><path d="M12 9v4l2.5 2"/><path d="M5 4 2.5 6.5M19 4l2.5 2.5"/></svg>
+    </div>
+    <h1>Schedule Sentry</h1>
+    <p class="pitch">Turn your calendar into alarms you can't miss.</p>
+    <a class="cta" href="#">Download on the App Store<small>[link placeholder — replace with your App Store URL]</small></a>
+  </header>
+
+  <section class="features" aria-label="Features">
+    <div class="feature">
+      <h2>Loud alarms from your calendar</h2>
+      <p>Pick the calendars that matter and get a real alarm before each event, one that sounds through Silent mode and Focus.</p>
+    </div>
+    <div class="feature">
+      <h2>Always in sync</h2>
+      <p>Events move; alarms follow. Schedule Sentry re-checks your calendars in the background and across your devices through iCloud.</p>
+    </div>
+    <div class="feature">
+      <h2>Assign events to family</h2>
+      <p>Create a household, assign an event to someone, and see when their devices have armed the alarm. No accounts, no servers, just iCloud.</p>
+    </div>
+  </section>
+
+  <footer>
+    <nav>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="support.html">Support</a>
+      <a href="mailto:schedulesentry@gmail.com">Contact</a>
+    </nav>
+    <p>&copy; 2026 Daren Hunter. iPhone, iPad, and Mac.</p>
+  </footer>
+</div>
+</body>
+</html>
